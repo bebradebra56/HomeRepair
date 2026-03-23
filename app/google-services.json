@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "567054287123",
+    "project_id": "homerepair-5c646",
+    "storage_bucket": "homerepair-5c646.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567054287123:android:632089d8a2315f324a1ae6",
+        "android_client_info": {
+          "package_name": "com.homerapa.repagom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsfaKrpujHtuzRwRYypBpF7gkvDEmVRg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

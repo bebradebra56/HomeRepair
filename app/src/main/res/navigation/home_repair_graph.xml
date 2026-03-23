@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_repair_graph"
+    app:startDestination="@id/homeRepairLoadFragment">
+
+    <fragment
+        android:id="@+id/homeRepairLoadFragment"
+        android:name="com.homerapa.repagom.gefr.presentation.ui.load.HomeRepairLoadFragment"
+        android:label="HomeRepairLoadFragment" >
+        <action
+            android:id="@+id/action_homeRepairLoadFragment_to_homeRepairV"
+            app:destination="@id/homeRepairV"
+            app:popUpTo="@id/home_repair_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeRepairV"
+        android:name="com.homerapa.repagom.gefr.presentation.ui.view.HomeRepairV"
+        android:label="HomeRepairV" />
+</navigation>

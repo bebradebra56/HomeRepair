@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/homeRepairBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_repair_land_backs" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/homeRepairLoadingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="homeRepairProgress, homeRepairProgressText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/homeRepairStateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:constraint_referenced_ids="homeRepairConnectionState" />
+
+
+    <ImageView
+        android:id="@+id/homeRepairProgressText"
+        android:layout_width="251dp"
+        android:layout_height="71dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225"
+        app:srcCompat="@drawable/home_repair_loadi" />
+
+    <ProgressBar
+        android:id="@+id/homeRepairProgress"
+        android:layout_width="148dp"
+        android:layout_height="156dp"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/homeRepairProgressText"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/homeRepairProgressText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.647" />
+
+    <ImageView
+        android:id="@+id/homeRepairConnectionState"
+        android:layout_width="0dp"
+        android:layout_height="245dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:srcCompat="@drawable/home_repair_state" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/homeRepairNotiGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="homeRepairNotifText,homeRepairGrandButton,homeRepairSkipButton,homeRepairNotifText2,homeRepairNotiBack" />
+
+    <ImageView
+        android:id="@+id/homeRepairNotiBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/homeRepairBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_repair_back_land" />
+
+
+    <TextView
+        android:id="@+id/homeRepairNotifText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/inter_bold"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Allow notifications about bonuses and promos"
+        android:textColor="@color/white"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toTopOf="@+id/homeRepairNotifText2"
+        app:layout_constraintEnd_toStartOf="@+id/homeRepairGrandButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeRepairBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="30dp" />
+
+    <Button
+        android:id="@+id/homeRepairGrandButton"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/home_repair_btn"
+        android:fontFamily="@font/inter_bold"
+        android:text="Yes, I Want Bonuses!"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/homeRepairSkipButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeRepairNotifText" />
+
+    <Button
+        android:id="@+id/homeRepairSkipButton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/home_repair_skip"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:shadowColor="#00FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Skip"
+        android:textColor="#B2FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/homeRepairGrandButton"
+        app:layout_constraintStart_toStartOf="@+id/homeRepairGrandButton" />
+
+
+    <TextView
+        android:id="@+id/homeRepairNotifText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/inter_bold"
+        android:letterSpacing="0"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+
+        android:text="Stay tuned with best offers from our casino"
+        android:textColor="#BEFFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeRepairSkipButton"
+        app:layout_constraintEnd_toEndOf="@+id/homeRepairNotifText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/homeRepairNotifText"
+        app:lineHeight="35dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
